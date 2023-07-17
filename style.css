@@ -1,0 +1,129 @@
+@font-face {
+    font-family: fingerpaint;
+    src: url(./FingerPaint-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fingerpaint;
+    text-transform: capitalize;
+}
+
+.heading{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    text-align: center;
+    margin-top: 1rem;
+    transform: translate(-50%,-50%);
+   
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e3f2fd;
+}
+
+.wrapper{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    border-radius: 5px;
+    transform: translate(-50%,-50%);
+    width: 75vmin;
+    height: 80vmin;
+    background: #293447;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: none;
+}
+
+.game-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 27px;
+    color: #b8c6dc;
+    font-size: 0.8rem;
+}
+
+.playing-board{
+    width: 100%;
+    height: 100%;
+    background: #212837;
+    display: grid;
+    grid-template: repeat(30, 1fr) /  repeat(30, 1fr);
+}
+
+.food{
+    background: #dd6d22;
+    border-radius: 10px 10px 10px 10px ;
+    width: 20px;
+    height: 20px;
+}
+
+.head{
+    background: #02701a;
+    border: none;
+    
+}
+.buttons{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.buttons svg{
+    /* filter: invert(75%); */
+    width: 20px;
+    height: 20px;
+    border: 1px solid #b8c6dc;
+    border-radius: 5px;
+}
+
+
+/* .buttons{
+    padding: 10px 12px;
+    background: #293447;
+} */
+
+@media screen and (max-width: 820px) {
+    .wrapper{
+        width: 90vmin;
+        height: 105vmin;
+    }
+    .game-details{
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .buttons{
+        display: flex;
+    }
+    .buttons svg{
+        padding: 10px 0;
+        font-size: 1rem;
+        width: 12px;
+        height: 8px
+        
+    }
+    .food{
+        background: #dd6d22;
+        border-radius: 10px 10px 10px 10px ;
+        width: 12px;
+        height: 12px;
+    }
+    .head{
+        background: #02701a;
+        border: none;
+        width: 16px;
+        height: 16px;
+        
+    }
+}
